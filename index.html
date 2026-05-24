@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ione Young | Sleepwalker Universe & Manifestation Collection</title>
+  <meta name="description" content="Official website for Ione Young's Sleepwalker Universal Never Ending Book Series and Manifestation Collection. Books available on Amazon. Merch coming soon." />
+  <style>
+    :root {
+      --black:#050403; --panel:#11100d; --gold:#d8a844; --gold-light:#ffe3a5;
+      --orange:#ff5a16; --cream:#fff7e8; --muted:#c8baa1;
+      --line:rgba(216,168,68,.42); --orange-line:rgba(255,90,22,.55);
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      background:
+        radial-gradient(circle at 12% 0%, rgba(216,168,68,.18), transparent 35%),
+        radial-gradient(circle at 88% 8%, rgba(255,90,22,.16), transparent 34%),
+        linear-gradient(180deg,#050403 0%,#0b0705 48%,#050403 100%);
+      color:var(--cream);
+      font-family:Georgia,"Times New Roman",serif;
+    }
+    a { color:inherit; text-decoration:none; }
+    img { display:block; width:100%; height:auto; }
+    .site-nav {
+      position:sticky; top:0; z-index:50; background:rgba(5,4,3,.94);
+      backdrop-filter:blur(10px); border-bottom:1px solid var(--line); padding:14px 18px;
+    }
+    .nav-inner {
+      max-width:1320px; margin:0 auto; display:flex; flex-wrap:wrap;
+      justify-content:space-between; align-items:center; gap:14px;
+    }
+    .brand {
+      color:var(--gold-light); font-weight:800; letter-spacing:2px;
+      font-size:clamp(17px,3vw,30px); text-transform:uppercase;
+      text-shadow:0 0 18px rgba(216,168,68,.32);
+    }
+    .nav-links { display:flex; gap:10px; flex-wrap:wrap; }
+    .nav-links a,.btn {
+      border:1px solid var(--line); color:var(--gold-light);
+      background:linear-gradient(180deg,rgba(216,168,68,.16),rgba(255,255,255,.03));
+      padding:10px 15px; border-radius:999px; font-size:13px;
+      letter-spacing:1px; text-transform:uppercase; font-weight:700;
+    }
+    .amazon {
+      background:linear-gradient(135deg,var(--gold),#9b671c);
+      color:#080604; border-color:rgba(255,227,165,.7);
+    }
+    .hero {
+      max-width:1320px; margin:0 auto; padding:52px 18px 28px;
+      display:grid; grid-template-columns:1.05fr .95fr; gap:28px; align-items:center;
+    }
+    .hero-panel {
+      border:1px solid var(--line); border-radius:28px;
+      background:linear-gradient(135deg,rgba(17,16,13,.92),rgba(5,4,3,.76)),
+                 radial-gradient(circle at top right,rgba(216,168,68,.16),transparent 45%);
+      padding:clamp(24px,5vw,48px);
+      box-shadow:0 22px 65px rgba(0,0,0,.55),0 0 42px rgba(216,168,68,.12);
+    }
+    .eyebrow {
+      color:var(--gold); letter-spacing:3px; text-transform:uppercase;
+      font-size:13px; font-weight:700;
+    }
+    h1 {
+      margin:16px 0; color:var(--gold-light); font-size:clamp(44px,8vw,96px);
+      line-height:.9; text-shadow:0 0 24px rgba(216,168,68,.35);
+    }
+    h2 {
+      color:var(--gold-light); margin:0 0 12px; font-size:clamp(34px,6vw,68px); line-height:.98;
+    }
+    h3 {
+      color:var(--gold-light); margin:0 0 10px; font-size:clamp(22px,3vw,32px); line-height:1.05;
+    }
+    p { color:var(--muted); line-height:1.6; font-size:clamp(16px,2.2vw,20px); }
+    .hero-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
+    .hero-image {
+      border-radius:26px; overflow:hidden; border:1px solid var(--line);
+      background:#090706; box-shadow:0 18px 60px rgba(0,0,0,.55);
+    }
+    .quote {
+      border-left:4px solid var(--gold); background:rgba(216,168,68,.08);
+      padding:16px 20px; border-radius:16px; color:var(--gold-light);
+      font-size:clamp(20px,3vw,30px); line-height:1.35; margin-top:18px;
+    }
+    .section { max-width:1320px; margin:0 auto; padding:46px 18px; }
+    .section-head {
+      display:flex; justify-content:space-between; align-items:flex-end;
+      gap:20px; margin-bottom:24px; flex-wrap:wrap;
+    }
+    .section-head p { max-width:720px; margin:0; }
+    .books-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .book-card {
+      border:1px solid var(--line); background:linear-gradient(180deg,rgba(18,15,11,.94),rgba(8,6,5,.94));
+      border-radius:24px; overflow:hidden; box-shadow:0 18px 42px rgba(0,0,0,.45);
+    }
+    .book-img-wrap { background:#000; border-bottom:1px solid rgba(216,168,68,.22); }
+    .book-img-wrap img { aspect-ratio:4/3; object-fit:cover; }
+    .book-info { padding:22px; }
+    .book-info p { margin:0; }
+    .book-buttons { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+    .book-buttons a {
+      border:1px solid var(--line); color:var(--gold-light); background:rgba(216,168,68,.10);
+      padding:10px 14px; border-radius:999px; font-weight:700; font-size:14px;
+    }
+    .manifest-zone {
+      max-width:none; border-top:1px solid rgba(255,90,22,.35); border-bottom:1px solid rgba(255,90,22,.35);
+      background:radial-gradient(circle at top,rgba(255,90,22,.25),transparent 42%),
+                 linear-gradient(180deg,rgba(255,90,22,.07),rgba(0,0,0,0));
+    }
+    .manifest-inner { max-width:1320px; margin:0 auto; padding:46px 18px; }
+    .manifest-card { border-color:rgba(255,90,22,.44); }
+    .manifest-card h3 { color:#fffaf1; }
+    .manifest-card .book-buttons a {
+      border-color:rgba(255,90,22,.56); background:rgba(255,90,22,.12); color:#fffaf1;
+    }
+    .orange { color:var(--orange); }
+    .merch-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
+    .merch-card {
+      border:1px solid var(--line); background:#080604; border-radius:24px;
+      overflow:hidden; box-shadow:0 18px 42px rgba(0,0,0,.45);
+    }
+    .merch-card img { aspect-ratio:16/10; object-fit:cover; }
+    .announcement { max-width:1320px; margin:20px auto; padding:0 18px 28px; }
+    .announcement-card {
+      border:1px solid var(--line); border-radius:26px;
+      background:linear-gradient(135deg,rgba(216,168,68,.12),rgba(255,90,22,.08));
+      padding:clamp(22px,4vw,38px); text-align:center;
+    }
+    .footer { border-top:1px solid var(--line); text-align:center; padding:42px 18px; color:var(--muted); }
+
+    .logo-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .logo-card {
+      border:1px solid var(--line); background:linear-gradient(180deg,rgba(18,15,11,.94),rgba(5,4,3,.96));
+      border-radius:24px; overflow:hidden; box-shadow:0 18px 42px rgba(0,0,0,.45);
+    }
+    .logo-card img { aspect-ratio:1/1; object-fit:cover; background:#000; }
+    .logo-card.wide img { aspect-ratio:16/10; }
+    .logo-info { padding:18px 20px; }
+    .logo-info h3 { font-size:clamp(20px,2.5vw,28px); }
+    .logo-info p { margin:0; }
+    .featured-merch { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
+    .featured-merch .merch-card img { aspect-ratio:16/10; object-fit:cover; }
+    .merch-card.full { grid-column:1 / -1; }
+    .merch-card.full img { aspect-ratio:16/8; object-fit:cover; }
+    .collection-note {
+      border:1px solid var(--orange-line); border-radius:24px; padding:24px;
+      background:linear-gradient(135deg,rgba(255,90,22,.12),rgba(216,168,68,.08));
+      margin-top:22px;
+    }
+    .contact-row { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:18px; }
+    .contact-pill {
+      border:1px solid var(--line); border-radius:999px; padding:10px 14px;
+      background:rgba(216,168,68,.09); color:var(--gold-light); font-weight:700;
+    }
+
+    @media (max-width:980px) {
+      .hero,.books-grid,.merch-grid,.logo-grid,.featured-merch { grid-template-columns:1fr; }
+      .nav-links a { font-size:12px; padding:9px 12px; }
+      .book-img-wrap img { aspect-ratio:16/10; }
+    }
+    @media (max-width:520px) {
+      .brand { font-size:18px; }
+      .hero { padding-top:32px; }
+      .hero-panel,.book-info { padding:18px; }
+      .section,.manifest-inner { padding:34px 14px; }
+      .books-grid,.merch-grid { gap:18px; }
+    }
+
+    .coming-banner {
+      display:inline-flex; align-items:center; gap:8px;
+      border:1px solid rgba(255,227,165,.72);
+      background:linear-gradient(135deg,rgba(216,168,68,.25),rgba(255,90,22,.16));
+      color:var(--gold-light);
+      padding:9px 14px; border-radius:999px; font-weight:900;
+      text-transform:uppercase; letter-spacing:1.5px; font-size:13px;
+      box-shadow:0 0 26px rgba(216,168,68,.22);
+    }
+    .merch-feature {
+      border:1px solid var(--line);
+      border-radius:30px;
+      overflow:hidden;
+      background:linear-gradient(180deg,rgba(17,16,13,.98),rgba(5,4,3,.96));
+      box-shadow:0 24px 70px rgba(0,0,0,.58), 0 0 38px rgba(216,168,68,.10);
+    }
+    .merch-feature img { width:100%; aspect-ratio:16/10; object-fit:cover; background:#000; }
+    .merch-feature.tall img { aspect-ratio:4/3; }
+    .merch-feature.square img { aspect-ratio:1/1; }
+    .merch-copy { padding:20px 22px 24px; }
+    .merch-copy h3 { margin-bottom:8px; }
+    .merch-copy p { margin:0; }
+    .showcase-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
+    .showcase-grid .wide { grid-column:1 / -1; }
+    .brand-strip {
+      margin:26px 0;
+      display:grid; grid-template-columns:repeat(4,1fr); gap:14px;
+    }
+    .brand-pill {
+      border:1px solid var(--line); border-radius:18px;
+      background:rgba(216,168,68,.08); padding:15px;
+      color:var(--gold-light); font-weight:800; text-align:center;
+      text-transform:uppercase; letter-spacing:1px;
+    }
+    .drop-note {
+      margin-top:24px;
+      border:1px solid rgba(255,90,22,.48);
+      border-radius:24px;
+      background:linear-gradient(135deg,rgba(255,90,22,.12),rgba(216,168,68,.08));
+      padding:22px;
+    }
+    .logo-hero {
+      display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:stretch;
+    }
+    .logo-hero .logo-card img { aspect-ratio:16/10; object-fit:cover; }
+    @media (max-width:980px) {
+      .showcase-grid,.brand-strip,.logo-hero { grid-template-columns:1fr; }
+      .merch-feature img { aspect-ratio:4/3; }
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <div class="brand">Ione Young • Books • Merch • Awakening</div>
+      <div class="nav-links">
+        <a href="#sleepwalker">Sleepwalker</a>
+        <a href="#manifestation">Manifestation</a>
+        <a href="#merch">Merch</a>
+        <a href="#logos">Logos</a>
+        <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Amazon Author Page</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-panel">
+      <div class="eyebrow">Official Website Update</div>
+      <h1>Sleepwalker Universe & Manifestation Collection</h1>
+      <p>The official home of Ione Young’s Sleepwalker Universal Never Ending Book Series and Manifestation Collection. Eighteen books, one connected universe of awareness, truth, healing, transformation, manifestation, and awakening.</p>
+      <div class="quote">“You were never lost… you just weren’t paying attention.”</div>
+      <div class="hero-actions">
+        <a class="btn amazon" href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Shop Books on Amazon</a>
+        <a class="btn" href="#sleepwalker">View Sleepwalker Books</a>
+        <a class="btn" href="#manifestation">View Manifestation Books</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="/sleepwalker-merch-products.png" alt="Sleepwalker Universe merch and book display">
+    </div>
+  </header>
+
+  <section id="sleepwalker" class="section">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Sleepwalker Universe</div>
+        <h2>Sleepwalker Books</h2>
+      </div>
+      <p>The Universal Never Ending Book Series by Ione Young. Every story connects. Every choice matters. Every soul must wake up.</p>
+    </div>
+    <div class="books-grid">
+      
+      <article class="book-card sleepwalker-card">
+        <div class="book-img-wrap">
+          <img src="/awakening.png" alt="Sleepwalker: The Awakening" loading="lazy">
+        </div>
+        <div class="book-info">
+          <h3>Sleepwalker: The Awakening</h3>
+          <p>Not all sleepers close their eyes.</p>
+          <div class="book-buttons">
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Paperback</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Hardcover</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Ebook</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="book-card sleepwalker-card">
+        <div class="book-img-wrap">
+          <img src="/untrusted.png" alt="Sleepwalker: The Untrusted" loading="lazy">
+        </div>
+        <div class="book-info">
+          <h3>Sleepwalker: The Untrusted</h3>
+          <p>Every story connects. Every choice matters.</p>
+          <div class="book-buttons">
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Paperback</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Hardcover</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Ebook</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="book-card sleepwalker-card">
+        <div class="book-img-wrap">
+          <img src="/chosen-before-belief.png" alt="Wake Up My Child" loading="lazy">
+        </div>
+        <div class="book-info">
+          <h3>Wake Up My Child</h3>
+          <p>The universe is calling. Will he answer?</p>
+          <div class="book-buttons">
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Paperback</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Hardcover</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Ebook</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="book-card sleepwalker-card">
+        <div class="book-img-wrap">
+          <img src="/before-we-chose-religion.png" alt="Before We Chose Religion" loading="lazy">
+        </div>
+        <div class="book-info">
+          <h3>Before We Chose Religion</h3>
+          <p>Remember who we were. Reclaim who we are.</p>
+          <div class="book-buttons">
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Paperback</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Hardcover</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Ebook</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="book-card sleepwalker-card">
+        <div class="book-img-wrap">
+          <img src="/unavoidable.png" alt="Chosen Before Belief" loading="lazy">
+        </div>
+        <div class="book-info">
+          <h3>Chosen Before Belief</h3>
+          <p>Religion is a choice. Reality chose you first.</p>
+          <div class="book-buttons">
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Paperback</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Hardcover</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Ebook</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="book-card sleepwalker-card">
+        <div class="book-img-wrap">
+          <img src="/unattractive.png" alt="Sleepwalker: The Unforgivable" loading="lazy">
+        </div>
+        <div class="book-info">
+          <h3>Sleepwalker: The Unforgivable</h3>
+          <p>The truth hurts, but the truth heals.</p>
+          <div class="book-buttons">
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Paperback</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Hardcover</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Ebook</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="book-card sleepwalker-card">
+        <div class="book-img-wrap">
+          <img src="/unforgivable.png" alt="Sleepwalker: The Unattractive" loading="lazy">
+        </div>
+        <div class="book-info">
+          <h3>Sleepwalker: The Unattractive</h3>
+          <p>Everyone has a side they hide in the darkness.</p>
+          <div class="book-buttons">
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Paperback</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Hardcover</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Ebook</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="book-card sleepwalker-card">
+        <div class="book-img-wrap">
+          <img src="/untrustworthy.png" alt="Sleepwalker: The Untrustworthy" loading="lazy">
+        </div>
+        <div class="book-info">
+          <h3>Sleepwalker: The Untrustworthy</h3>
+          <p>The greatest danger is not always evil itself.</p>
+          <div class="book-buttons">
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Paperback</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Hardcover</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Ebook</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="book-card sleepwalker-card">
+        <div class="book-img-wrap">
+          <img src="/wake-up-my-child.png" alt="Sleepwalker: The Unavoidable" loading="lazy">
+        </div>
+        <div class="book-info">
+          <h3>Sleepwalker: The Unavoidable</h3>
+          <p>Pay attention. The unseen is moving.</p>
+          <div class="book-buttons">
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Paperback</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Hardcover</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Ebook</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Sleepwalker Merchandise</div>
+        <h2>Sleepwalker Merch Preview</h2>
+      </div>
+      <p>Official merch coming soon: hoodies, shirts, hats, mugs, tumblers, tote bags, journals, bookmarks, candles, posters, phone cases, stickers, and more.</p>
+    </div>
+    <div class="merch-grid">
+      
+      <article class="merch-card">
+        <img src="/sleepwalker-merch-1.png" alt="Sleepwalker merchandise preview" loading="lazy">
+      </article>
+
+      <article class="merch-card">
+        <img src="/sleepwalker-merch-2.png" alt="Sleepwalker merchandise preview" loading="lazy">
+      </article>
+
+      <article class="merch-card">
+        <img src="/sleepwalker-merch-3.png" alt="Sleepwalker merchandise preview" loading="lazy">
+      </article>
+
+      <article class="merch-card">
+        <img src="/sleepwalker-merch-4.png" alt="Sleepwalker merchandise preview" loading="lazy">
+      </article>
+
+      <article class="merch-card">
+        <img src="/sleepwalker-merch-5.png" alt="Sleepwalker merchandise preview" loading="lazy">
+      </article>
+
+      <article class="merch-card">
+        <img src="/sleepwalker-merch-products.png" alt="Sleepwalker merchandise preview" loading="lazy">
+      </article>
+
+      <article class="merch-card">
+        <img src="/sleepwalker-merch-products-2.png" alt="Sleepwalker merchandise preview" loading="lazy">
+      </article>
+
+    </div>
+  </section>
+
+  <section id="manifestation" class="manifest-zone">
+    <div class="manifest-inner">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow orange">Manifestation Collection</div>
+          <h2>Manifestation Collection Books</h2>
+        </div>
+        <p>The Manifestation Collection helps readers understand how emotions, beliefs, trauma, subconscious programming, repeated patterns, healing, and awareness shape reality.</p>
+      </div>
+      <div class="books-grid">
+        
+      <article class="book-card manifest-card">
+        <div class="book-img-wrap">
+          <img src="/feel-create-introduction.png" alt="What You Feel Is What You Create: The Introduction" loading="lazy">
+        </div>
+        <div class="book-info">
+          <h3>What You Feel Is What You Create: The Introduction</h3>
+          <p>Your feelings create your reality.</p>
+          <div class="book-buttons">
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Paperback</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Hardcover</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Ebook</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="book-card manifest-card">
+        <div class="book-img-wrap">
+          <img src="/feel-create-dummies.png" alt="Manifestation for Dummies" loading="lazy">
+        </div>
+        <div class="book-info">
+          <h3>Manifestation for Dummies</h3>
+          <p>A simple guide to healing, awareness, and real alignment.</p>
+          <div class="book-buttons">
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Paperback</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Hardcover</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Ebook</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="book-card manifest-card">
+        <div class="book-img-wrap">
+          <img src="/feel-create-healing-test.png" alt="What You Feel Is What You Create: The Healing Test" loading="lazy">
+        </div>
+        <div class="book-info">
+          <h3>What You Feel Is What You Create: The Healing Test</h3>
+          <p>Feel it. Heal it. Create it. Live it.</p>
+          <div class="book-buttons">
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Paperback</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Hardcover</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Ebook</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="book-card manifest-card">
+        <div class="book-img-wrap">
+          <img src="/feel-create-reality-test.png" alt="What You Feel Is What You Create: The Reality Test" loading="lazy">
+        </div>
+        <div class="book-info">
+          <h3>What You Feel Is What You Create: The Reality Test</h3>
+          <p>Your reactions reveal your reality.</p>
+          <div class="book-buttons">
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Paperback</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Hardcover</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Ebook</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="book-card manifest-card">
+        <div class="book-img-wrap">
+          <img src="/accept-experience.png" alt="What You Accept Is What You Experience" loading="lazy">
+        </div>
+        <div class="book-info">
+          <h3>What You Accept Is What You Experience</h3>
+          <p>Accept better. Experience more. Live better.</p>
+          <div class="book-buttons">
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Paperback</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Hardcover</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Ebook</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="book-card manifest-card">
+        <div class="book-img-wrap">
+          <img src="/ignore-reality.png" alt="What You Ignore Becomes Your Reality" loading="lazy">
+        </div>
+        <div class="book-info">
+          <h3>What You Ignore Becomes Your Reality</h3>
+          <p>Awareness is the first step to freedom.</p>
+          <div class="book-buttons">
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Paperback</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Hardcover</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Ebook</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="book-card manifest-card">
+        <div class="book-img-wrap">
+          <img src="/believe-controls-receive.png" alt="What You Believe Controls What You Receive" loading="lazy">
+        </div>
+        <div class="book-info">
+          <h3>What You Believe Controls What You Receive</h3>
+          <p>Your beliefs shape your thoughts. Your thoughts shape your reality.</p>
+          <div class="book-buttons">
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Paperback</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Hardcover</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Ebook</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="book-card manifest-card">
+        <div class="book-img-wrap">
+          <img src="/practice-become.png" alt="What You Practice Is What You Become" loading="lazy">
+        </div>
+        <div class="book-info">
+          <h3>What You Practice Is What You Become</h3>
+          <p>Your practice today. Your freedom tomorrow.</p>
+          <div class="book-buttons">
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Paperback</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Hardcover</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Ebook</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="book-card manifest-card">
+        <div class="book-img-wrap">
+          <img src="/repeat-remember.png" alt="What You Repeat Is What You Remember" loading="lazy">
+        </div>
+        <div class="book-info">
+          <h3>What You Repeat Is What You Remember</h3>
+          <p>Break patterns. Build freedom.</p>
+          <div class="book-buttons">
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Paperback</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Hardcover</a>
+            <a href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Ebook</a>
+          </div>
+        </div>
+      </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="logos" class="section">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Official Brand Identity</div>
+        <h2>Sleepwalker & Manifest Logos</h2>
+      </div>
+      <p>These official marks connect the books, merch, music, movement, and message into one visual universe.</p>
+    </div>
+
+    <div class="logo-hero">
+      <article class="logo-card wide">
+        <img src="/2993.png" alt="Sleepwalker Universe logo" loading="lazy">
+        <div class="logo-info">
+          <h3>Sleepwalker Universe Logo</h3>
+          <p>The spiritual book-universe mark for the Sleepwalker brand, rooted in awakening, truth, and The Supreme Spiritual Power/God’s message.</p>
+        </div>
+      </article>
+      <article class="logo-card wide">
+        <img src="/2987.png" alt="Manifest abundance logo" loading="lazy">
+        <div class="logo-info">
+          <h3>Manifest Collection Logo Concept</h3>
+          <p>The first Manifestation Collection merch mark built around mindset, abundance, emotional power, belief, and creation.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="logo-grid" style="margin-top:24px;">
+      <article class="logo-card">
+        <img src="/2990.png" alt="Mind Over Matter logo" loading="lazy">
+        <div class="logo-info">
+          <h3>Mind Over Matter</h3>
+          <p>Right-chest logo for tees, hoodies, zip ups, sweatpants, sweatshorts, hats, bags, and accessories.</p>
+        </div>
+      </article>
+      <article class="logo-card">
+        <img src="/2991.png" alt="Mind Over Matter copyright logo" loading="lazy">
+        <div class="logo-info">
+          <h3>Protected Logo</h3>
+          <p>Copyright version for protected mockups, brand displays, and official product visuals.</p>
+        </div>
+      </article>
+      <article class="logo-card">
+        <img src="/1555.png" alt="Sleepwalker logo placement concept" loading="lazy">
+        <div class="logo-info">
+          <h3>Sleepwalker Placement Mark</h3>
+          <p>A placement concept for future Sleepwalker product tags, sleeve marks, labels, car decals, and branded graphics.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="merch" class="section">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Official Merch Displays</div>
+        <h2>Mind Over Matter & Manifest Merch</h2>
+      </div>
+      <div class="coming-banner">Merch Coming Soon</div>
+      <p>The new merch line connects motivation, manifestation, mindset, abundance, streetwear, lifestyle products, and the full Sleepwalker Universe brand.</p>
+    </div>
+
+    <div class="brand-strip">
+      <div class="brand-pill">Featured Sets</div>
+      <div class="brand-pill">Color Collections</div>
+      <div class="brand-pill">Accessories</div>
+      <div class="brand-pill">Lifestyle Merch</div>
+    </div>
+
+    <div class="showcase-grid">
+      <article class="merch-feature wide">
+        <img src="/2986.png" alt="Colorful Mind Over Matter two-piece merch sets" loading="lazy">
+        <div class="merch-copy">
+          <h3>Color Two-Piece Collections</h3>
+          <p>Red, royal blue, forest green, orange, purple, pink, navy, black, gray, yellow, light blue, and lavender concepts for shirts, hoodies, zip ups, sweatpants, and sweatshorts.</p>
+        </div>
+      </article>
+
+      <article class="merch-feature wide">
+        <img src="/2993.png" alt="Full multi-color merch catalog" loading="lazy">
+        <div class="merch-copy">
+          <h3>Full Color Merch Catalog</h3>
+          <p>Expanded merch preview including tees, hoodies, zip ups, sweatpants, sweatshorts, hats, slides, socks, bags, tumblers, journals, phone cases, car items, and more.</p>
+        </div>
+      </article>
+
+      <article class="merch-feature">
+        <img src="/2985.png" alt="Black and gray Mind Over Matter two-piece sets" loading="lazy">
+        <div class="merch-copy">
+          <h3>Black & Gray Signature Sets</h3>
+          <p>Clean black and gray two-piece designs with the Mind Over Matter mark on the front and the larger back design.</p>
+        </div>
+      </article>
+
+      <article class="merch-feature">
+        <img src="/2992.png" alt="Full black merch accessory catalog" loading="lazy">
+        <div class="merch-copy">
+          <h3>Black Lifestyle Collection</h3>
+          <p>Accessories, lifestyle products, car merch, footwear, bags, home items, and wearable add-ons for the Mind Over Matter and Manifest line.</p>
+        </div>
+      </article>
+
+      <article class="merch-feature">
+        <img src="/2988.png" alt="Gray and black two-piece detail mockups" loading="lazy">
+        <div class="merch-copy">
+          <h3>Gray & Black Detail Board</h3>
+          <p>A closer product board showing the right-chest placement, large back design, pants, shorts, hoodies, zip ups, and matching sets.</p>
+        </div>
+      </article>
+
+      <article class="merch-feature square">
+        <img src="/2987.png" alt="Manifest abundance design" loading="lazy">
+        <div class="merch-copy">
+          <h3>Manifest Abundance Design</h3>
+          <p>The money, prosperity, abundance, peace, and Mind Over Matter statement design for the Manifest merch line.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="drop-note">
+      <h3>Official Merch Coming Soon</h3>
+      <p>These designs are preview mockups for the upcoming merch line. The goal is to build a clothing and lifestyle brand around mindset, manifestation, healing, awareness, abundance, and the Sleepwalker Universe message.</p>
+    </div>
+  </section>
+
+  <section class="manifest-zone">
+    <div class="manifest-inner">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow orange">Manifestation Merch</div>
+          <h2>Manifest Collection Merch Preview</h2>
+        </div>
+        <div class="coming-banner">Coming Soon</div>
+        <p>The Manifest Collection merch connects emotional healing, belief, mindset, abundance, transformation, and manifestation into wearable visual statements.</p>
+      </div>
+      <div class="merch-grid">
+        <article class="merch-card">
+          <img src="/manifest-merch-products.png" alt="Manifestation Collection merchandise preview" loading="lazy">
+        </article>
+        <article class="merch-card">
+          <img src="/manifest-merch-1.png" alt="Manifestation Collection merchandise preview" loading="lazy">
+        </article>
+        <article class="merch-card">
+          <img src="/manifest-merch-2.png" alt="Manifestation Collection merchandise preview" loading="lazy">
+        </article>
+        <article class="merch-card">
+          <img src="/2987.png" alt="Manifest abundance logo concept" loading="lazy">
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Sleepwalker Merch</div>
+        <h2>Sleepwalker Universe Merch Preview</h2>
+      </div>
+      <div class="coming-banner">Coming Soon</div>
+      <p>The original Sleepwalker merch stays connected to the book universe while the new Mind Over Matter and Manifest merch expands the full brand.</p>
+    </div>
+    <div class="merch-grid">
+      <article class="merch-card">
+        <img src="/sleepwalker-merch-products.png" alt="Sleepwalker merch products" loading="lazy">
+      </article>
+      <article class="merch-card">
+        <img src="/sleepwalker-merch-products-2.png" alt="Sleepwalker merch products two" loading="lazy">
+      </article>
+      <article class="merch-card">
+        <img src="/sleepwalker-merch-1.png" alt="Sleepwalker merch one" loading="lazy">
+      </article>
+      <article class="merch-card">
+        <img src="/sleepwalker-merch-2.png" alt="Sleepwalker merch two" loading="lazy">
+      </article>
+      <article class="merch-card">
+        <img src="/sleepwalker-merch-3.png" alt="Sleepwalker merch three" loading="lazy">
+      </article>
+      <article class="merch-card">
+        <img src="/sleepwalker-merch-4.png" alt="Sleepwalker merch four" loading="lazy">
+      </article>
+      <article class="merch-card">
+        <img src="/sleepwalker-merch-5.png" alt="Sleepwalker merch five" loading="lazy">
+      </article>
+      <article class="merch-card">
+        <img src="/1555.png" alt="Sleepwalker logo concept" loading="lazy">
+      </article>
+    </div>
+  </section>
+
+  <section class="announcement">
+    <div class="announcement-card">
+      <div class="eyebrow">Coming December 2026</div>
+      <h2>Sleepwalker Season 2</h2>
+      <p>Season 2 begins with <strong>Sleepwalker: The Unreliable</strong> and <strong>Sleepwalker: The Unacceptable</strong>, continuing the universal journey into awareness, truth, spiritual awakening, humanity, healing, and transformation.</p>
+      <a class="btn amazon" href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Visit Amazon Author Page</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <h3>Ione Young</h3>
+    <p>Sleepwalker Universe • Manifestation Collection • Books • Merch Coming Soon • Awareness • Truth • Transformation</p><p>Facebook: Sleepwalker Universe | Manifest Collection</p>
+    <p><a class="btn amazon" href="https://www.amazon.com/author/iownssleepwalkerworld2" target="_blank" rel="noopener">Amazon Author Page</a></p>
+
+    <div class="contact-row">
+      <span class="contact-pill">Facebook: Sleepwalker Universe</span>
+      <span class="contact-pill">Facebook: Manifest Collection</span>
+      <span class="contact-pill">Email: sleepwalkerandmanifest@gmail.com</span>
+    </div>
+  </footer>
+</body>
+</html>
